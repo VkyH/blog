@@ -14,7 +14,7 @@ def register(request):
         register_form=CustomRegistrationForm(request.POST)
         if register_form.is_valid():
             register_form.save()
-            return redirect('home')
+            return redirect('login')
     
     register_form=CustomRegistrationForm()
     return render(request, 'register.html',{'register_form':register_form})
